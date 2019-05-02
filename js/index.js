@@ -99,18 +99,3 @@ let newNav = document.querySelectorAll("a");
 newNav.forEach(item => {
   item.style.color = 'green';
 })
-
-
-// Step 1: create something
-// const newPTag = document.createElement('p');
-// console.log(newPTag);
-
-// Step 2: add content
-// newPTag.textContent = 'Hello World!';
-// console.log(newPTag);
-
-// Step 3: add it to the DOM
-// const extraStuff = document.querySelector('.extra-stuff');
-// console.log(extraStuff);
-// extraStuff.prepend(newPTag);
-// extraStuff.append(newPTag);
