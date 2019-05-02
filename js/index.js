@@ -39,4 +39,78 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let mainImg = document.getElementById("middle-img");
+mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let navMain = document.querySelectorAll("a");
+for (let i = 0; i < navMain.length; i++) {
+  navMain[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+}
+
+let h1 = document.querySelectorAll("h1");
+console.log(h1);
+h1[0].textContent = siteContent["cta"]["h1"];
+
+let startedBtn = document.querySelector("button");
+startedBtn.textContent = siteContent["cta"]["button"];
+
+let h4 = document.querySelectorAll("h4");
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let mainContent = document.querySelectorAll(".main-content p");
+mainContent[0].textContent = siteContent["main-content"]["features-content"];
+mainContent[1].textContent = siteContent["main-content"]["about-content"];
+mainContent[2].textContent = siteContent["main-content"]["services-content"];
+mainContent[3].textContent = siteContent["main-content"]["product-content"];
+mainContent[4].textContent = siteContent["main-content"]["vision-content"];
+
+let contact = document.querySelector(".contact h4");
+contact.textContent = siteContent["contact"]["contact-h4"];
+
+let contactP = document.querySelectorAll(".contact p");
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
+
+let plans = document.createElement('a');
+plans.textContent = 'Plans';
+
+let story = document.createElement('a');
+story.textContent = 'Story';
+
+let navigation = document.querySelector('nav');
+navigation.prepend(plans);
+navigation.append(story);
+
+let newNav = document.querySelectorAll("a");
+
+newNav.forEach(item => {
+  item.style.color = 'green';
+})
+
+
+// Step 1: create something
+// const newPTag = document.createElement('p');
+// console.log(newPTag);
+
+// Step 2: add content
+// newPTag.textContent = 'Hello World!';
+// console.log(newPTag);
+
+// Step 3: add it to the DOM
+// const extraStuff = document.querySelector('.extra-stuff');
+// console.log(extraStuff);
+// extraStuff.prepend(newPTag);
+// extraStuff.append(newPTag);
