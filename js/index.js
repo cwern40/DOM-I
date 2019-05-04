@@ -52,6 +52,12 @@ for (let i = 0; i < navMain.length; i++) {
   navMain[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
 }
 
+// navItem.forEach(
+//   (item, i) =>
+//     (item.textContent = siteContent.nav['nav-item-' + (i + 1)]) &&
+//     (item.style.color = 'green')
+// );
+
 let h1 = document.querySelectorAll("h1");
 console.log(h1);
 h1[0].textContent = siteContent["cta"]["h1"];
